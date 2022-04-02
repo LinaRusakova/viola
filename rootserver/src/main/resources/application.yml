@@ -1,0 +1,11 @@
+server:
+  port: 8600
+  servlet:
+    context-path:
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8600/eureka
+    register-with-eureka: false
+    fetch-registry: false
