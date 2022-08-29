@@ -1,9 +1,8 @@
 package com.viola.userserver.controller;
 
 import com.netflix.discovery.EurekaClient;
-import com.viola.userserver.model.UserCredential;
-import com.viola.userserver.service.UserService;
-import com.viola.userserver.service.UserServiceImpl;
+import com.viola.userserver.model.User;
+import com.viola.userserver.service.UserDetailsServiceImpl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -22,10 +21,10 @@ public class AuthController {
 @Autowired
     private EurekaClient eurekaClient;
 
-    private final UserServiceImpl userService;
+    private final UserDetailsServiceImpl userService;
 
     @GetMapping("/users/get")
-    public List<UserCredential> getAllUsers() {
+    public List<User> getAllUsers() {
         return userService.findAll();
 //        return new HashMap<String, String>() {{
 //            put(login, password);

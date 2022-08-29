@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 //@EnableSwagger2
 @SpringBootApplication
-//@EnableAutoConfiguration
+@EnableAutoConfiguration
 public class ComposingServerApplication {
 
 	public static void main(String[] args) {
